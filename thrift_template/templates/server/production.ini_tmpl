@@ -1,0 +1,7 @@
+[server:main]
+use = egg:zhwservice#thread_pool_server
+port = 9090
+pool_size = 10
+
+[app:main]
+use = egg:$project#$project

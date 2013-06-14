@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+thrift_template/__init__.py
+thrift_template.egg-info/PKG-INFO
+thrift_template.egg-info/SOURCES.txt
+thrift_template.egg-info/dependency_links.txt
+thrift_template.egg-info/entry_points.txt
+thrift_template.egg-info/not-zip-safe
+thrift_template.egg-info/top_level.txt
+thrift_template/templates/__init__.py

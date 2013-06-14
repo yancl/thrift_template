@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: thrift-template
+Version: 0.1dev
+Summary: template to create thrift services
+Home-page: UNKNOWN
+Author: yancl
+Author-email: kmoving@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: thrift paster
+Platform: UNKNOWN

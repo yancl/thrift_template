@@ -1,0 +1,6 @@
+
+      # -*- Entry points: -*-
+      [paste.paster_create_template]
+      thrift_service = thrift_template.templates:ThriftServiceTemplate
+      thrift_server  = thrift_template.templates:ThriftServerTemplate
+      

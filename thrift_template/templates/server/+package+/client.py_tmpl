@@ -1,0 +1,11 @@
+from thrift.transport import TSocket, TTransport
+from thrift.protocol import TBinaryProtocol
+from thrift.server.TServer import TThreadPoolServer
+from .gen.$project.${project.capitalize()} import Client
+
+
+# Talk to a server via TCP sockets, using a binary protocol
+transport = TSocket.TSocket("localhost", 9090)
+transport.open()
+protocol = TBinaryProtocol.TBinaryProtocol(transport)
+$project = Client(protocol)
