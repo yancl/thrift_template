@@ -1,7 +1,7 @@
 thrift_template
 ===============
 
-a template for fast and clean create thrift service
+a template for fast and clean create thrift service using paste script & paste template.
 
 1)创建一个干净的env,暂用名字services:
 
