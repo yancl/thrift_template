@@ -23,7 +23,7 @@ setup(name='$project',
       entry_points="""
       # -*- Entry points: -*-
       [paste.server_runner]
-      thread_pool_server = $project.${project.lower()}.thrift_service:thread_pool_server_runner
-      non_block_server = $project.${project.lower()}.thrift_service:nonblock_server_runner
+      thread_pool_server = ${project.lower()}.thrift_service:thread_pool_server_runner
+      non_block_server = ${project.lower()}.thrift_service:nonblock_server_runner
       """,
       )
