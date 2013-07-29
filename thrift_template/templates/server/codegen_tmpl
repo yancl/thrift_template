@@ -1,1 +1,2 @@
+mkdir -p $project/gen
 thrift --gen py:utf8strings -out $project/gen $project/protocol/$project.thrift;
