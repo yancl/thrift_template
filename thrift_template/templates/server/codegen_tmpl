@@ -1,2 +1,7 @@
 mkdir -p $project/gen
 thrift --gen py:utf8strings -out $project/gen $project/protocol/$project.thrift;
+#you should generate base.thrift & fb303.thrift
+#and put them into site-packages
+#because python's relative import can't pass if not
+rm -rf $project/gen/base
+rm -rf $project/user/gen/fb303
