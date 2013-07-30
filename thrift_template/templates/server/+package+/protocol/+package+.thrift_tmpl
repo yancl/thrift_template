@@ -1,0 +1,6 @@
+include "base.thrift"
+
+exception ExceptionBase {
+    1: i32 what,
+    2: string why
+}
