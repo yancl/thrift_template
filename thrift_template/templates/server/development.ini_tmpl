@@ -1,4 +1,8 @@
 [server:main]
+use = egg:zhwservice#non_block_server
+port = 9090
+
+[server:thread_pool]
 use = egg:zhwservice#thread_pool_server
 port = 9090
 pool_size = 10
