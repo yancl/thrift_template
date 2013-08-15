@@ -42,8 +42,6 @@ TNonblockingServer.serve =  nonblock_serve
 
 
 def post_prepare(app, global_conf, **kwargs):
-    print 'global_conf:', global_conf
-    print 'kwargs:', kwargs
     if hasattr(app, 'post_prepare_callback'):
         getattr(app, 'post_prepare_callback')(global_conf, **kwargs)
 
@@ -53,7 +51,6 @@ def thread_pool_server_runner(app, global_conf, **kwargs):
     port = int(kwargs.get('port', 9090))
     pool_size = int(kwargs.get('pool_size', 10))
     transport = TSocket.TServerSocket(host=host, port=port)
-    #transport.host = host
     tfactory = TTransport.TBufferedTransportFactory()
     pfactory = TBinaryProtocol.TBinaryProtocolFactory()
     server = TThreadPoolServer(app, transport, tfactory, pfactory)
@@ -71,7 +68,6 @@ def nonblock_server_runner(app, global_conf, **kwargs):
     host = kwargs.get('host', '0.0.0.0')
     port = int(kwargs.get('port', 9090))
     transport = TSocket.TServerSocket(host=host, port=port)
-    #transport.host = host
     pfactory = TBinaryProtocol.TBinaryProtocolFactory()
     server = TNonblockingServer(app, transport, pfactory, pfactory)
 
