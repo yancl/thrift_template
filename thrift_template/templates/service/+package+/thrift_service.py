@@ -4,8 +4,8 @@ from thrift.server.TServer import TThreadPoolServer
 from thrift.server.TNonblockingServer import TNonblockingServer
 
 
-def post_prepare(self):
-    print 'running on port:',self.serverTransport.port
+def post_prepare(self, port):
+    print 'running on port:',port
 
 
 def threadpool_prepare(self):
@@ -26,7 +26,7 @@ def threadpool_serve(self):
 
     #do something after address binding
     #for example, register self to nameservice
-    self.post_prepare()
+    self.post_prepare(self.serverTransport.port)
 
     while True:
       try:
@@ -43,7 +43,9 @@ def nonblock_serve(self):
     """
     self._stop = False
     self.prepare()
-    self.post_prepare()
+
+    self.post_prepare(self.socket.port)
+
     while not self._stop:
         self.handle()
 
