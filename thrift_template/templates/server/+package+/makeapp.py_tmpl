@@ -1,6 +1,7 @@
 from .gen.$project.${project.capitalize()} import Processor
 from .app import Handler
 
+
 def make_app(global_config, **local_conf):
     handler = Handler()
     processor = Processor(handler)
